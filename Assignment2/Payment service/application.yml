@@ -1,0 +1,10 @@
+server:
+  port: 8085
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      bankServiceCB:
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
